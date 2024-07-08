@@ -22,3 +22,7 @@
 
 4.
 ![image](https://github.com/e-redun/AsconPilotMessageBox/assets/74231361/5b6728ff-e68c-46a6-bd25-74ed7c8c3732)
+
+Обсуждение
+
+<a href="https://asconpilot.livejournal.com/853.html"><b>Обсуждение</b></a>
