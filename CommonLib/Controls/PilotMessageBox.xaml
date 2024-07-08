@@ -37,6 +37,13 @@
                Bottom="0"
                />
 
+            <Thickness x:Key="RightMargin"
+               Left="0"
+               Top="0"
+               Right="{StaticResource MarginGap}"
+               Bottom="0"
+               />
+
             <Style TargetType="TextBlock" BasedOn="{StaticResource DefaultTextBlockStyle}"/>
             
         </ResourceDictionary>
@@ -65,13 +72,12 @@
                Width="25"
                Visibility="Collapsed"
                VerticalAlignment="Top"
+               Margin="{StaticResource RightMargin}"
                />
 
         <TextBlock Name="MessageContainer"
                    Text="Text"
                    TextWrapping="WrapWithOverflow"
-                   Margin="{StaticResource LeftMargin}"
                    />
-                   <!--Foreground="{StaticResource NormalForeground}"-->
     </DockPanel>
 </controls:DialogWindow>

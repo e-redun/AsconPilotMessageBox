@@ -9,24 +9,31 @@ namespace PilotMessageBoxModule
     [Export(typeof(IMenu<MainViewContext>))]
     public class MainMenuPlugin : IMenu<MainViewContext>
     {
-        private const string DIALOG_MENU = "DialogMenu";
-        private const string DIALOG_MENU_HEADER = "PilotMessageBox";
+        private const string TEST_MENU_ITEM = "PilotMessageBoxItem";
+        private const string TEST_MENU_ITEM_HEADER = "PilotMessageBox";
 
         public void Build(IMenuBuilder builder, MainViewContext context)
         {
-            var item = builder.AddItem(DIALOG_MENU, 1).WithHeader(DIALOG_MENU_HEADER);
+            builder.AddItem(TEST_MENU_ITEM, 1).WithHeader(TEST_MENU_ITEM_HEADER);
         }
 
         public void OnMenuItemClick(string name, MainViewContext context)
         {
-            if (name == DIALOG_MENU)
+            if (name == TEST_MENU_ITEM)
             {
-                //PilotMessageBox.Show("Нет маршрутов для данного типа целевого объекта",
-                //                    "Внимание",
-                //                    MessageBoxButton.OK,
-                //                    MessageBoxImage.Warning);
+                PilotMessageBox.Show("Нет сообщений искомого типа");
 
-                PilotMessageBox.Show("Нет маршрутов для данного типа целевого объекта");
+                PilotMessageBox.Show("Нет сообщений искомого типа",
+                                     "Внимание!");
+
+                PilotMessageBox.Show("Нет сообщений искомого типа. Продолжить?",
+                                     "Внимание!",
+                                     MessageBoxButton.YesNo);
+
+                PilotMessageBox.Show("Нет сообщений искомого типа. Продолжить?",
+                                     "Внимание!",
+                                     MessageBoxButton.YesNo,
+                                     MessageBoxImage.Warning);
             }
         }
     }
